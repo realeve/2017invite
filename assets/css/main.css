@@ -1,0 +1,133 @@
+body {
+    font-size: 20pt;
+}
+
+.section {
+    padding: 10px;
+}
+
+.main {
+    background: url(../img/main2.jpg);
+    background-size: 100%;
+}
+
+.main-pic {
+    width: 340px;
+    height: 170px;
+    max-width:100%;
+}
+
+.end {
+    background: url(../img/main.jpg);
+    background-size: 100%;
+    position: relative;
+}
+
+.section-pre {
+    background: url(../img/pre.jpg) 50%;
+    color: #eee;
+    background-size: cover;
+}
+
+.section1 {
+    background: url(../img/01.jpg) 50%;
+    color: #eee;
+}
+
+.section2 {
+    background: url(../img/02.jpg) 50%;
+    color: #eee;
+}
+
+.section3 {
+    background: url(../img/03.jpg) 50%;
+    color: #eee;
+}
+
+.section4 {
+    background: url(../img/04.jpg) 50%;
+    color: #eee;
+}
+
+.title {
+    font-size: 28pt;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 18pt;
+}
+
+.text-medium {
+    font-size: 15pt;
+}
+
+.text-small {
+    font-size: 12pt;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-color-white {
+    color: #eee;
+}
+
+.copy {
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1;
+    left: 166px;
+    width: 67px;
+    height: 69px;
+    bottom: 100px;
+    animation-duration: 1s;
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.arrow img {
+    width: 67px;
+    height: 69px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: black;
+    border-width: 0px;
+}
+
+.animate-slow {
+    animation-duration: 4s;
+    animation-delay: 0.05s;
+}
+
+.hide {
+    display: none;
+}
+.intro .fp-tableCell{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.intro-main{
+    font-weight: bold;
+    font-size: 35pt;
+    Writing-mode:tb-rl;
+    letter-spacing: 10px;
+}
+.intro-sub{
+    font-size: 25pt;
+    Writing-mode:tb-rl;
+}
+.intro-sub::before{
+    content: "—— "
+}
+
+.intro-sub::after{
+    content: " ——"
+}
