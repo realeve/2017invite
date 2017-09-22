@@ -17,6 +17,11 @@ $(document).ready(function() {
                     .eq(index - 1)
                     .find('.hide')
                     .css('display', 'block');
+                if (index == $('.section').length) {
+                    $('#slider').hide();
+                } else {
+                    $('#slider').show();
+                }
             },
             onLeave: function(index) {
                 setTimeout(function() {

@@ -91,4 +91,4 @@ gulp.task('rev', ['clean'], function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['copy', 'rev', 'css', 'scripts', 'images']);
+gulp.task('default', ['copy', 'css', 'scripts', 'images', 'rev']);
