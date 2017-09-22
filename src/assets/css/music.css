@@ -1,0 +1,57 @@
+.media-wrap {
+    overflow: hidden;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10000;
+    width: 6.5em;
+    height: 6.5em;
+    font-size: 16px;
+}
+
+.media-wrap span {
+    float: left;
+    height: 4em;
+    width: 4em;
+    line-height: 3rem;
+    color: #fff;
+    font-size: 1em;
+}
+
+.media-wrap i {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.music-btn,
+.music-btn-white {
+    float: right;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url('../img/music-icon.png');
+    background: url('../img/audio.png');
+    background-size: cover;
+}
+
+.music-btn-white {
+    background: url('../img/audio.png');
+    background-size: cover;
+}
+
+.music-btn.on {
+    -webkit-animation: reverseRotataZ 2s linear infinite;
+}
+
+@-webkit-keyframes reverseRotataZ {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
+
+#musicBtnTxt {
+    color: #455;
+    margin-top: -10px;
+}

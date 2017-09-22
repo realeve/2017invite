@@ -1,0 +1,265 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    background: #fff;
+    color: #333;
+    min-height: 100%;
+    text-rendering: optimizelegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-weight: normal;
+}
+
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block
+}
+
+audio,
+canvas,
+video {
+    display: inline-block
+}
+
+body,
+html {
+    /* 'dengxian' */
+    font: 300 1em/1.65 '等线', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans GB', 'Microsoft Yahei', 'STHeiti';
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+acronym,
+abbr {
+    border-bottom: 1px dotted;
+    font-variant: normal
+}
+
+abbr {
+    cursor: help
+}
+
+del {
+    text-decoration: line-through
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: 400
+}
+
+ul {
+    list-style: none
+}
+
+caption,
+th {
+    text-align: left
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative
+}
+
+sup {
+    top: -0.5em
+}
+
+sub {
+    bottom: -0.25em
+}
+
+a {
+    color: #1abc9c
+}
+
+q:before,
+q:after {
+    content: ''
+}
+
+:root sub,
+:root sup {
+    vertical-align: baseline
+}
+
+a:hover {
+    text-decoration: none
+}
+
+strong,
+b {
+    color: #000;
+    font-weight: 700
+}
+
+.section {
+    min-height: 100%
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+@media only screen and ( max-width: 640px) {
+    blockquote {
+        margin: 1em 0
+    }
+    .tip {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 5rem;
+    }
+    .wrapper h3 {
+        font-size: 20px
+    }
+    #nav,
+    .tip {
+        display: none
+    }
+}
+
+.center .fp-tableCell,
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.left {
+    text-align: left;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.margin-top-60 {
+    margin-top: 60px;
+}
+
+.margin-top-70 {
+    margin-top: 70px;
+}
+
+.margin-top-80 {
+    margin-top: 80px;
+}
+
+.margin-top-90 {
+    margin-top: 90px;
+}
+
+.margin-top-100 {
+    margin-top: 100px;
+}
