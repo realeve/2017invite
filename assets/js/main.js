@@ -29,13 +29,13 @@ var weixin = (function () {
         wx
             .ready(function () {
                 var option = {
-                    title: '人民币硬币发行60周年纪念展邀请函',
-                    desc: '中国印钞造币邀您参加人民币硬币发行60周年纪念展，10月6日-9日，中国上海不见不散。',
+                    title: '国币之尊艺术之美，人民币硬币发行60周年纪念展',
+                    desc: '国币之尊艺术之美，人民币硬币发行60周年纪念展，等你来！。',
                     link: window
                         .location
                         .href
                         .split('?')[0],
-                    imgUrl: 'http://cbpm.sinaapp.com/cdn/logo/cbpm.jpg'
+                    imgUrl: 'http://cbpm.sinaapp.com/cdn/logo/coin.jpg'
                 };
                 wx.onMenuShareAppMessage(option);
                 wx.onMenuShareTimeline(option);

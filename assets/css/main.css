@@ -14,12 +14,12 @@ body {
 .main-pic {
     width: 340px;
     height: 170px;
-    max-width:100%;
+    max-width: 100%;
 }
 
 .end {
-    background: url(../img/main.jpg);
-    background-size: 100%;
+    background: url(../img/coinbg2.jpg) 50%;
+    background-size: cover;
     position: relative;
 }
 
@@ -110,24 +110,39 @@ body {
 .hide {
     display: none;
 }
-.intro .fp-tableCell{
+
+.intro .fp-tableCell {
     display: flex;
     flex-direction: row-reverse;
 }
-.intro-main{
+
+.intro-main {
     font-weight: bold;
     font-size: 35pt;
-    Writing-mode:tb-rl;
+    Writing-mode: tb-rl;
     letter-spacing: 10px;
 }
-.intro-sub{
+
+.intro-sub {
     font-size: 25pt;
-    Writing-mode:tb-rl;
+    Writing-mode: tb-rl;
 }
-.intro-sub::before{
+
+.intro-sub::before {
     content: "—— "
 }
 
-.intro-sub::after{
+.intro-sub::after {
     content: " ——"
+}
+
+.time {
+    text-align: right;
+    float: left
+}
+
+.location {
+    padding-left:20px;
+    text-align: left;
+    float: right
 }
