@@ -52,7 +52,7 @@ body {
 }
 
 .title {
-    font-size: 28pt;
+    font-size: 25pt;
     font-weight: bold;
 }
 
@@ -144,7 +144,7 @@ body {
 }
 
 .location {
-    padding-left: 20px;
+    padding-left: 10px;
     text-align: left;
     float: right
 }
