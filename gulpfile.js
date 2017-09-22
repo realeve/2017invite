@@ -7,12 +7,15 @@ var less = require('gulp-less');
 var minifyCSS = require('gulp-csso');
 var del = require('del');
 
+var base64 = require('gulp-base64');
 var rev = require('gulp-rev');
 var revCollector = require('gulp-rev-collector');
 var htmlmin = require('gulp-htmlmin');
 
+var gulpSequence = require('gulp-sequence')
+
 var paths = {
-    scripts: 'src/assets/js/**/*',
+    scripts: ['src/assets/js/wx.js', 'src/assets/js/main.js', 'src/assets/js/bgm.js'],
     images: 'src/assets/img/**/*',
     css: ['src/assets/css/reset.css', 'src/assets/css/music.css', 'src/assets/css/main.css'],
     audio: 'src/assets/audio/**/*',
@@ -24,12 +27,12 @@ gulp.task('clean', function() {
     return del(['dist']);
 });
 
-gulp.task('copy', ['clean'], function() {
+gulp.task('copy', function() {
     gulp.src(paths.audio).pipe(gulp.dest('dist/assets/audio'));
     gulp.src(paths.font).pipe(gulp.dest('dist/assets/fonts'));
 })
 
-gulp.task('html', ['clean'], function() {
+gulp.task('html', function() {
     gulp.src(paths.html)
         .pipe(htmlmin({
             collapseWhitespace: true
@@ -37,7 +40,7 @@ gulp.task('html', ['clean'], function() {
         .pipe(gulp.dest('dist'));
 })
 
-gulp.task('scripts', ['clean'], function() {
+gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         .pipe(sourcemaps.init())
         .pipe(uglify())
@@ -49,9 +52,10 @@ gulp.task('scripts', ['clean'], function() {
         .pipe(gulp.dest('rev/js'))
 });
 
-gulp.task('css', ['clean'], function() {
+gulp.task('css', function() {
     return gulp.src(paths.css)
         .pipe(concat('index.css'))
+        .pipe(base64())
         .pipe(minifyCSS())
         //.pipe(less())
         .pipe(rev())
@@ -61,7 +65,7 @@ gulp.task('css', ['clean'], function() {
 });
 
 // Copy all static images
-gulp.task('images', ['clean'], function() {
+gulp.task('images', function() {
     return gulp.src(paths.images)
         // Pass in options to the task
         .pipe(imagemin({ optimizationLevel: 5 }))
@@ -75,7 +79,7 @@ gulp.task('watch', function() {
     gulp.watch(paths.images, ['images']);
 });
 
-gulp.task('rev', ['clean'], function() {
+gulp.task('rev', function() {
     return gulp.src(['rev/**/*.json', 'src/templates/**/*.html'])
         .pipe(revCollector({
             replaceReved: true,
@@ -90,5 +94,7 @@ gulp.task('rev', ['clean'], function() {
         .pipe(gulp.dest('dist'));
 });
 
-// The default task (called when you run `gulp` from cli)
-gulp.task('default', ['copy', 'css', 'scripts', 'images', 'rev']);
+
+gulp.task('default', gulpSequence('clean', 'copy', 'css', 'scripts', 'images', 'rev'))
+
+// gulp.task('default', ['copy', 'css', 'scripts', 'images', 'rev']);

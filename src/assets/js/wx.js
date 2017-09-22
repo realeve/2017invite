@@ -1,8 +1,5 @@
 (function() {
     var debug = false;
-    var dom = document.createElement("script");
-    dom.src = "http://res.wx.qq.com/open/js/jweixin-1.0.0.js";
-    document.body.appendChild(dom);
 
     function initWXConfig() {
         $
@@ -64,6 +61,9 @@
 
     if (!debug) {
         initWXConfig();
-        recordReadNum();
+        var href = window.location.href;
+        if (href.indexOf('localhost') != -1 || href.indexOf('file:///') != -1) {
+            recordReadNum();
+        }
     }
 })();
