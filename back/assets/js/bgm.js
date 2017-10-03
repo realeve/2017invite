@@ -1,5 +1,9 @@
-var audioInit = function(audioname) {
-	$('#autoplay').attr('src', './assets/audio/'+audioname+'.mp3');
+var audioInit = function() {
+	function randomID(i) {
+		return Math.ceil(Math.random() * i);
+	}
+	var bgmid = randomID(6);
+	$('#autoplay').attr('src', './assets/audio/bgm2.mp3');
 	var audio = document.getElementById('autoplay');
 	var controller = document.getElementById('musicBtn');
 	var controllerHint = document.getElementById('musicBtnTxt');
@@ -22,4 +26,4 @@ var audioInit = function(audioname) {
 		}, 1000);
 
 	}, false);
-};
+}();

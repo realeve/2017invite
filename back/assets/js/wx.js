@@ -60,9 +60,9 @@
     }
 
     if (!debug) {
+        initWXConfig();
         var href = window.location.href;
-        if (href.indexOf('localhost') != -1 && href.indexOf('file:///') != -1) {
-            initWXConfig();
+        if (href.indexOf('localhost') != -1 || href.indexOf('file:///') != -1) {
             recordReadNum();
         }
     }

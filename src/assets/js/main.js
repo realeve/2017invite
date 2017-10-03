@@ -1,42 +1,38 @@
-$(document).ready(function() {
-    function arrowAlignCenter() {
-        var dom = $('.arrow');
-        dom.css('left', (window.innerWidth - dom.width()) / 2);
-        dom = $('.main-pic');
-        dom.css('height', dom.width() / 2);
-        // dom = $('.copy').eq(1);
-        // dom.css('padding-left',(window.innerWidth-dom.width())/2);
-    }
+$(document)
+    .ready(function () {
+        function arrowAlignCenter() {
+            var dom = $('.arrow');
+            dom.css('left', (window.innerWidth - dom.width()) / 2);
+        }
 
-    function initFullpage() {
-        $('.counter').counterUp({ delay: 10, time: 2000 });
-        $('#app').fullpage({
-            css3: true,
-            afterLoad: function(page, index) {
-                $('.section')
-                    .eq(index - 1)
-                    .find('.hide')
-                    .css('display', 'block');
-                if (index == $('.section').length) {
-                    $('#slider').hide();
-                } else {
-                    $('#slider').show();
-                }
-            },
-            onLeave: function(index) {
-                setTimeout(function() {
-                    $('.section')
-                        .eq(index - 1)
-                        .find('.hide')
-                        .css('display', 'none');
-                }, 500)
+        function initDOM() {
+            var arr = [];
+            for (var i = 1; i <= 27; i++) {
+                var j = (i < 10
+                    ? '0'
+                    : '') + i;
+                arr.push('<div class="section">\
+            <img src="./assets/img/' + j + '.jpg">\
+        </div>')
             }
-        });
-    }
+            $('#app').append(arr.join(''));
+        }
 
-    function init() {
-        arrowAlignCenter();
-        initFullpage();
-    }
-    init();
-})
+        function initFullpage() {
+            $('.counter').counterUp({delay: 10, time: 2000});
+            $('#app').fullpage({
+                css3: true,
+                slidesNavigation: true,
+                afterLoad: function (page, index) {},
+                onLeave: function (index) {}
+            });
+        }
+
+        function init() {
+            initDOM();
+            arrowAlignCenter();
+            initFullpage();
+            audioInit('1、前言');
+        }
+        init();
+    })
