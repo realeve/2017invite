@@ -17,7 +17,7 @@ var gulpSequence = require('gulp-sequence')
 var paths = {
     scripts: ['src/assets/js/wx.js', 'src/assets/js/main.js', 'src/assets/js/bgm.js'],
     images: 'src/assets/img/**/*',
-    css: ['src/assets/css/reset.css', 'src/assets/css/music.css', 'src/assets/css/main.css'],
+    css: ['src/assets/css/reset.css', 'src/assets/css/music.css', 'src/assets/css/main.css', 'src/assets/css/landscape.css'],
     audio: 'src/assets/audio/**/*',
     font: 'src/assets/font/**/*',
     html: 'src/*.html'
