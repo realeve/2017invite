@@ -1,5 +1,5 @@
 var audioInit = function(audioname) {
-	$('#autoplay').attr('src', './assets/audio_low_hd/'+audioname+' (48CBR).mp3');
+	$('#autoplay').attr('src', './assets/audio/'+audioname+' (48CBR).mp3');
 	var audio = document.getElementById('autoplay');
 	var controller = document.getElementById('musicBtn');
 	var controllerHint = document.getElementById('musicBtnTxt');

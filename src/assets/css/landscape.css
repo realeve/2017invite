@@ -30,7 +30,7 @@
 }
 
   @media screen and (orientation: portrait) {
-      .section {
+      .section,.swiper-slide {
           -webkit-transform: rotate(90deg);
           -moz-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
@@ -39,7 +39,7 @@
           height: 100vh;
           overflow: hidden;
       }
-      .section img {
+      .section img,.swiper-slide img {
           width: 100vh;
           height: 100vh;
       }
@@ -50,13 +50,13 @@
   /* 横屏 */
 
   @media screen and (orientation: landscape) {
-      .section {
+      .section,.swiper-slide {
           -webkit-transform: rotate(0);
           -moz-transform: rotate(0);
           -ms-transform: rotate(0);
           transform: rotate(0)
       }
-      .section img {
+      .section img,.swiper-slide img {
           width: 100%;
           height: 100%;
       }
