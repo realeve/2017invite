@@ -15,20 +15,22 @@ var htmlmin = require('gulp-htmlmin');
 var gulpSequence = require('gulp-sequence')
 
 var paths = {
-    scripts: ['src/assets/js/wx.js', 'src/assets/js/main.js', 'src/assets/js/bgm.js'],
+    scripts: ['src/assets/js/wx.js', 'src/assets/js/main.js', 'src/assets/js/bgm.js','src/assets/js/video.js'],
     images: 'src/assets/img/**/*',
     css: ['src/assets/css/reset.css', 'src/assets/css/music.css', 'src/assets/css/main.css', 'src/assets/css/landscape.css'],
     audio: 'src/assets/audio/**/*',
     font: 'src/assets/font/**/*',
-    html: 'src/*.html'
+    html: 'src/*.html',
+    video:'src/assets/video/**/*'
 };
 
 gulp.task('clean', function() {
     return del(['dist']);
 });
 
-gulp.task('copy', function() {
+gulp.task('media', function() {
     gulp.src(paths.audio).pipe(gulp.dest('dist/assets/audio'));
+    gulp.src(paths.video).pipe(gulp.dest('dist/assets/video'));
     gulp.src(paths.font).pipe(gulp.dest('dist/assets/fonts'));
 })
 
@@ -95,6 +97,6 @@ gulp.task('rev', function() {
 });
 
 
-gulp.task('default', gulpSequence('clean', 'copy', 'css', 'scripts', 'images', 'rev'))
+gulp.task('default', gulpSequence('clean', 'media', 'css', 'scripts', 'images', 'rev'))
 
 // gulp.task('default', ['copy', 'css', 'scripts', 'images', 'rev']);

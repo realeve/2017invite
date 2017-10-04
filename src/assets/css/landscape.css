@@ -1,7 +1,7 @@
   
 .landscape {
     font-weight: 100;
-    font-size: 13pt;
+    font-size: 11pt;
     z-index: 1000;
     position: absolute;
     width: 100%;
@@ -64,3 +64,36 @@
           display: none;
       }
   }
+  
+.loading {
+    z-index: 10;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center
+}
+
+.btns {
+    width: 100%;
+    text-align: center
+}
+
+.btn {
+    /*  background-color: #000;*/
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 2px;
+}
