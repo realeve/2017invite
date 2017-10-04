@@ -79,8 +79,8 @@ $(document).ready(function () {
         loadImg(0);
         loadImg(1);
 
-        audioInit(audioList[0]);
-        loadComment(noteList[0]);
+        audioEvents(1);
+        // loadComment(noteList[0]);
         // $(".lazyload:not(':first')").lazyload();
     }
 
