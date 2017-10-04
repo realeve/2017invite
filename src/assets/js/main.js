@@ -85,7 +85,6 @@ $(document)
         }
 
         function initFullpage() {
-            $('.counter').counterUp({delay: 10, time: 2000});
             $('#app').fullpage({
                 css3: true,
                 slidesNavigation: true,

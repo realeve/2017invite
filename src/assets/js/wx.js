@@ -1,6 +1,4 @@
-(function() {
-    var debug = false;
-
+(function () {
     function initWXConfig() {
         $
             .ajax({
@@ -10,9 +8,9 @@
                         .location
                         .href
                         .split('#')[0]
-                }
+            }
             })
-            .done(function(obj) {
+            .done(function (obj) {
                 wx.config({
                     debug: false,
                     appId: obj.appId,
@@ -27,7 +25,7 @@
 
     function initWXShare() {
         wx
-            .ready(function() {
+            .ready(function () {
                 var option = {
                     title: '国币之尊  艺术之美——人民币硬币发行60周年纪念展',
                     desc: '国币之尊  艺术之美——人民币硬币发行60周年纪念展，等你来！',
@@ -50,20 +48,23 @@
             url: "http://cbpc540.applinzi.com/index.php",
             data: {
                 s: "/addon/Api/Api/recordReadNum",
-                url: window.location.href.split("#")[0].split("_")[0]
+                url: window
+                    .location
+                    .href
+                    .split("#")[0]
+                    .split("_")[0]
             },
-            dataType: "jsonp",
-            callback: "JsonCallback"
-        }).done(function(n) {
-            console.log(n);
-        })
+                dataType: "jsonp",
+                callback: "JsonCallback"
+            })
+            .done(function (n) {
+                console.log(n);
+            })
     }
 
-    if (!debug) {
-        var href = window.location.href;
-        if (href.indexOf('localhost') != -1 && href.indexOf('file:///') != -1) {
-            initWXConfig();
-            recordReadNum();
-        }
+    var href = window.location.href;
+    if (href.indexOf('localhost') != -1 && href.indexOf('file:///') != -1) {
+        initWXConfig();
+        recordReadNum();
     }
 })();
