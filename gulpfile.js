@@ -15,7 +15,7 @@ var htmlmin = require('gulp-htmlmin');
 var gulpSequence = require('gulp-sequence')
 
 var paths = {
-    scripts: ['src/assets/js/wx.js', 'src/assets/js/swiper.js', 'src/assets/js/bgm.js','src/assets/js/video.js'],
+    scripts: ['src/assets/js/wx.js','src/assets/js/noteList.js', 'src/assets/js/swiper.js', 'src/assets/js/bgm.js','src/assets/js/video.js'],
     images: 'src/assets/img/**/*',
     css: ['src/assets/css/reset.css', 'src/assets/css/music.css', 'src/assets/css/main.css', 'src/assets/css/landscape.css'],
     audio: 'src/assets/audio/**/*',
