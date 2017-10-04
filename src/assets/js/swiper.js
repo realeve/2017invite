@@ -163,7 +163,7 @@ $(document).ready(function () {
         $('.comment-content .wrapper').html(html);
     }
     function audioEvents(index) {
-
+        $('audio').unbind('ended');
         var audioName = audioList[index - 1];
         if (audioName == '') {
             return;
