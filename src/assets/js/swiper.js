@@ -78,8 +78,7 @@ $(document).ready(function () {
         loadImg(1);
 
         audioEvents(1);
-        // loadComment(noteList[0]);
-        // $(".lazyload:not(':first')").lazyload();
+        // loadComment(noteList[0]); $(".lazyload:not(':first')").lazyload();
     }
 
     function loadImg(index) {
@@ -137,12 +136,14 @@ $(document).ready(function () {
             // console.log($(this).data('slide'));
         });
 
-        var flag =[false,false];
+        var flag = [false, false];
 
         $('.menu-close').on('touchstart', closeMenu);
         $('.menu-open').on('touchstart', function () {
-            if(!flag[0]){
-                $('.tip span').first().html(' ');
+            if (!flag[0]) {
+                $('.tip span')
+                    .first()
+                    .html(' ');
                 flag[0] = true;
             }
             $('.menu-container').removeClass('menu-off');
@@ -157,8 +158,10 @@ $(document).ready(function () {
             $('.comment-open').show();
         })
         $('.comment-open').on('touchstart', function () {
-            if(!flag[1]){
-                $('.tip span').last().hide();
+            if (!flag[1]) {
+                $('.tip span')
+                    .last()
+                    .hide();
                 flag[1] = true;
             }
             $('.comment-container').removeClass('comment-off');
@@ -177,23 +180,27 @@ $(document).ready(function () {
             return;
         }
         var aid = 0;
+        var volume = (index == 6 || index == 4 || index == 5)
+            ? 0.4
+            : 1;
+            volume = (index >= 16 && index <= 19) ? 0.8 :volume;
         if (typeof audioName == 'string') {
 
-            audioInit(audioName);
+            audioInit(audioName, volume);
             loadComment(noteList[index - 1]);
 
-            $('audio').on('ended', function () {                
+            $('audio').on('ended', function () {
                 slider.slideNext();
             });
         } else {
 
-            audioInit(audioName[aid]);
+            audioInit(audioName[aid], volume);
             loadComment(noteList[index - 1][aid++]);
 
             $('audio').on('ended', function () {
                 console.log('载入下一页');
                 if (aid < audioName.length) {
-                    audioInit(audioName[aid]);
+                    audioInit(audioName[aid], volume);
                     loadComment(noteList[index - 1][aid++]);
                 } else {
                     // 阅读完毕之后自动翻页

@@ -190,7 +190,7 @@ body {
     left: 5px;
     position: absolute;
     bottom: 5px;
-    z-index:11;
+    z-index:3;
     /* background-color: #0e87f0; */
 }
 
@@ -230,7 +230,7 @@ body {
 }
 
 .comment-icon {
-    z-index:11;
+    z-index:3;
     width: 32px;
     height: 32px;
     right: 5px;

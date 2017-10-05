@@ -1,9 +1,9 @@
-var audioInit = function(audioname) {
+var audioInit = function(audioname,volume) {
 	$('#autoplay').attr('src', './assets/audio/'+audioname+' (48CBR).mp3');
 	var audio = document.getElementById('autoplay');
 	var controller = document.getElementById('musicBtn');
 	var controllerHint = document.getElementById('musicBtnTxt');
-	audio.volume = 0.8;
+	audio.volume = volume;
 
 	document.getElementById('musicBtn').addEventListener('touchstart', function() {
 		controllerHint.style.display = '';
