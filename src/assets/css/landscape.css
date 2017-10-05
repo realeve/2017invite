@@ -98,11 +98,15 @@
     border-radius: 2px;
 }
 
-.landscape .tip{
+.tip{
     bottom: 0px;
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 82%;
+    width: 88%;
     padding: 5px;
+    z-index: 3;
+    left: 6%;
+    font-size: 11pt;
+    color: #fff;
 }

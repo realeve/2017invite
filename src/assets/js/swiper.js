@@ -137,8 +137,14 @@ $(document).ready(function () {
             // console.log($(this).data('slide'));
         });
 
+        var flag =[false,false];
+
         $('.menu-close').on('touchstart', closeMenu);
         $('.menu-open').on('touchstart', function () {
+            if(!flag[0]){
+                $('.tip span').first().html(' ');
+                flag[0] = true;
+            }
             $('.menu-container').removeClass('menu-off');
             $('.menu-container').addClass('menu-on');
             $(this).hide();
@@ -151,6 +157,10 @@ $(document).ready(function () {
             $('.comment-open').show();
         })
         $('.comment-open').on('touchstart', function () {
+            if(!flag[1]){
+                $('.tip span').last().hide();
+                flag[1] = true;
+            }
             $('.comment-container').removeClass('comment-off');
             $('.comment-container').addClass('comment-on');
             $('.comment-close').show();
