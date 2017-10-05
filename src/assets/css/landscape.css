@@ -2,7 +2,7 @@
 .landscape {
     font-weight: 100;
     font-size: 11pt;
-    z-index: 1000;
+    z-index: 10;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -96,4 +96,13 @@
     border: 1px solid #fff;
     color: #fff;
     border-radius: 2px;
+}
+
+.landscape .tip{
+    bottom: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    padding: 5px;
 }
